@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="Build2014App.NoSQLPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Build2014App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="10,27,0,0" TextWrapping="Wrap" Text="//nosql/" VerticalAlignment="Top" Height="51" Width="380" FontFamily="Global User Interface" FontSize="36"/>
+        <ListView x:Name="CustomerList" HorizontalAlignment="Left" Height="180" Margin="10,104,0,0" VerticalAlignment="Top" Width="200" BorderThickness="3" BorderBrush="White">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock Text="{Binding FirstName}" FontSize="36" FontFamily="Global User Interface" />
+                        <TextBlock Text="{Binding LastName}" FontSize="24" FontFamily="Global User Interface" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ListView x:Name="ProductList" HorizontalAlignment="Left" Height="160" Margin="10,316,0,0" VerticalAlignment="Top" Width="200" BorderThickness="3" BorderBrush="White">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock Text="{Binding Name}" FontSize="24" FontFamily="Global User Interface" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ListView x:Name="BadOrderList" HorizontalAlignment="Left" Height="180" Margin="238,104,0,0" VerticalAlignment="Top" Width="200" BorderThickness="3" BorderBrush="White">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock Text="{Binding OrderId}" FontSize="24" FontFamily="Global User Interface" />
+                        <TextBlock Text="{Binding CustomerId}" FontSize="24" FontFamily="Global User Interface" />
+                        <TextBlock Text="{Binding ProductId}" FontSize="24" FontFamily="Global User Interface" />
+                        <TextBlock Text="{Binding Quantity}" FontSize="24" FontFamily="Global User Interface" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView x:Name="GoodOrderList" HorizontalAlignment="Left" Height="160" Margin="239,316,0,0" VerticalAlignment="Top" Width="200" BorderThickness="3" BorderBrush="White">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock Text="{Binding OrderId}" FontSize="24" FontFamily="Global User Interface" />
+                        <TextBlock Text="{Binding FirstName}" FontSize="24" FontFamily="Global User Interface" />
+                        <TextBlock Text="{Binding LastName}" FontSize="24" FontFamily="Global User Interface" />
+                        <TextBlock Text="{Binding ProductName}" FontSize="24" FontFamily="Global User Interface" />
+                        <TextBlock Text="{Binding Quantity}" FontSize="24" FontFamily="Global User Interface" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <TextBlock x:Name="tbCustomers" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Customers" VerticalAlignment="Top" Margin="10,78,0,0" FontSize="22" FontFamily="Global User Interface"/>
+        <TextBlock x:Name="tbProducts" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Products" VerticalAlignment="Top" Margin="10,291,0,0" FontSize="22" FontFamily="Global User Interface"/>
+        <TextBlock x:Name="tbBadOrders" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Bad Orders" VerticalAlignment="Top" Margin="239,78,0,0" FontSize="22" FontFamily="Global User Interface"/>
+        <TextBlock x:Name="tbGoodOrders" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Good Orders" VerticalAlignment="Top" Margin="238,289,0,0" FontSize="22" FontFamily="Global User Interface"/>
+        <Button x:Name="btnInsert" Content="Insert" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,477,0,0" Width="200" FontFamily="Global User Interface" FontSize="24" Height="70" Click="btnInsert_Click"/>
+        <Button x:Name="btnSelect" Content="Select" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,537,0,0" Width="200" FontFamily="Global User Interface" FontSize="24" Height="70" Click="btnSelect_Click"/>
+        <Button x:Name="btnDeleteOne" Content="Delete One" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,597,0,0" Width="200" FontFamily="Global User Interface" FontSize="24" Height="70" Click="btnDeleteOne_Click"/>
+        <Button x:Name="btnDeleteMany" Content="Delete Many" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,657,0,0" Width="200" FontFamily="Global User Interface" FontSize="24" Height="70" Click="btnDeleteMany_Click"/>
+        <Button x:Name="btnDeleteAll" Content="Delete All" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,717,0,0" Width="200" FontFamily="Global User Interface" FontSize="24" Height="70" Click="btnDeleteAll_Click"/>
+        <Button x:Name="btnJoin" Content="Join" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="238,477,0,0" Width="200" FontFamily="Global User Interface" FontSize="24" Height="70" Click="btnJoin_Click"/>
+        <Button x:Name="btnLoadTables" Content="Load Tables" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="238,537,0,0" Width="200" FontFamily="Global User Interface" FontSize="24" Height="70" Click="btnLoadTables_Click"/>
+        <Button x:Name="btnUpdateOne" Content="Update One" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="238,597,0,0" Width="200" FontFamily="Global User Interface" FontSize="24" Height="70" Click="btnUpdateOne_Click"/>
+        <Button x:Name="btnUpdateMany" Content="Update Many" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="238,657,0,0" Width="200" FontFamily="Global User Interface" FontSize="24" Height="70" Click="btnUpdateMany_Click"/>
+        <Button x:Name="btnUpdateAll" Content="Update All" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="238,717,0,0" Width="200" FontFamily="Global User Interface" FontSize="24" Height="70" Click="btnUpdateAll_Click"/>
+
+    </Grid>
+</Page>

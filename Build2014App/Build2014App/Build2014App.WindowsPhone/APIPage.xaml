@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="Build2014App.APIPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Build2014App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="10,27,0,0" TextWrapping="Wrap" Text="//api/" VerticalAlignment="Top" Height="56" Width="380" FontFamily="Global User Interface" FontSize="36"/>
+        <Button x:Name="btnDownloadProducts" Content="Download Products" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="95,234,0,0" Width="280" FontFamily="Global User Interface" FontSize="24" Height="100" Click="btnDownloadProducts_Click"/>
+        <Button x:Name="btnDownloadCustomers" Content="Download Customers" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="95,326,0,0" Width="280" FontFamily="Global User Interface" FontSize="24" Height="100" Click="btnDownloadCustomers_Click"/>
+        <Button x:Name="btnUploadOrder" Content="Upload Order" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="95,416,0,0" Width="280" FontFamily="Global User Interface" FontSize="24" Height="100" Click="btnUploadOrder_Click"/>
+
+    </Grid>
+</Page>
